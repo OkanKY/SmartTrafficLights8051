@@ -1,0 +1,24 @@
+C51 COMPILER V9.54   AK_LL_TRAFIKLAMBAS_                                                   05/21/2015 20:41:28 PAGE 1   
+
+
+C51 COMPILER V9.54, COMPILATION OF MODULE AK_LL_TRAFIKLAMBAS_
+OBJECT MODULE PLACED IN AkýllýTrafikLambasý.OBJ
+COMPILER INVOKED BY: C:\Keil_v5\C51\BIN\C51.EXE AkýllýTrafikLambasý.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND TABS(2
+                    -)
+
+line level    source
+
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    260    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =     12    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

@@ -1,0 +1,248 @@
+BL51 BANKED LINKER/LOCATER V6.22                                                        05/21/2015  20:41:28  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22, INVOKED BY:
+C:\KEIL_V5\C51\BIN\BL51.EXE AkýllýTrafikLambasý.obj TO AkýllýTrafikLambasý RAMSIZE (256)
+
+
+MEMORY MODEL: SMALL
+
+
+INPUT MODULES INCLUDED:
+  AkýllýTrafikLambasý.obj (AK_LL_TRAFIKLAMBAS_)
+  C:\KEIL_V5\C51\LIB\C51S.LIB (?C_STARTUP)
+  C:\KEIL_V5\C51\LIB\C51S.LIB (?C?IMUL)
+  C:\KEIL_V5\C51\LIB\C51S.LIB (?C?UIDIV)
+  C:\KEIL_V5\C51\LIB\C51S.LIB (?C_INIT)
+
+
+LINK MAP OF MODULE:  AkýllýTrafikLambasý (AK_LL_TRAFIKLAMBAS_)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            DATA    0008H     000CH     UNIT         ?DT?AK_LL_TRAFIKLAMBAS_
+            IDATA   0014H     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+            CODE    0003H     0003H     ABSOLUTE     
+                    0006H     000DH                  *** GAP ***
+            CODE    0013H     0003H     ABSOLUTE     
+                    0016H     07EAH                  *** GAP ***
+            CODE    0800H     008CH     UNIT         ?C_C51STARTUP
+            CODE    088CH     0067H     UNIT         ?C?LIB_CODE
+            CODE    08F3H     003CH     UNIT         ?PR?_SECONDDELAY?AK_LL_TRAFIKLAMBAS_
+            CODE    092FH     003CH     UNIT         ?PR?GENERATETIME?AK_LL_TRAFIKLAMBAS_
+            CODE    096BH     002BH     UNIT         ?PR?MAIN?AK_LL_TRAFIKLAMBAS_
+            CODE    0996H     0019H     UNIT         ?PR?CLEAR?AK_LL_TRAFIKLAMBAS_
+            CODE    09AFH     0018H     UNIT         ?PR?_PHASE2?AK_LL_TRAFIKLAMBAS_
+            CODE    09C7H     0016H     UNIT         ?PR?_PHASE1?AK_LL_TRAFIKLAMBAS_
+            CODE    09DDH     0011H     UNIT         ?C_INITSEG
+            CODE    09EEH     000DH     UNIT         ?PR?INCOUNTA?AK_LL_TRAFIKLAMBAS_
+            CODE    09FBH     000DH     UNIT         ?PR?INCOUNTB?AK_LL_TRAFIKLAMBAS_
+
+
+
+OVERLAY MAP OF MODULE:   AkýllýTrafikLambasý (AK_LL_TRAFIKLAMBAS_)
+
+
+SEGMENT
+  +--> CALLED SEGMENT
+---------------------
+?C_C51STARTUP
+  +--> ?PR?MAIN?AK_LL_TRAFIKLAMBAS_
+  +--> ?C_INITSEG
+
+?PR?MAIN?AK_LL_TRAFIKLAMBAS_
+  +--> ?PR?_PHASE1?AK_LL_TRAFIKLAMBAS_
+BL51 BANKED LINKER/LOCATER V6.22                                                      05/21/2015  20:41:28  PAGE 2
+
+
+  +--> ?PR?CLEAR?AK_LL_TRAFIKLAMBAS_
+  +--> ?PR?GENERATETIME?AK_LL_TRAFIKLAMBAS_
+  +--> ?PR?_PHASE2?AK_LL_TRAFIKLAMBAS_
+
+?PR?_PHASE1?AK_LL_TRAFIKLAMBAS_
+  +--> ?PR?_SECONDDELAY?AK_LL_TRAFIKLAMBAS_
+
+?PR?_PHASE2?AK_LL_TRAFIKLAMBAS_
+  +--> ?PR?_SECONDDELAY?AK_LL_TRAFIKLAMBAS_
+
+
+
+SYMBOL TABLE OF MODULE:  AkýllýTrafikLambasý (AK_LL_TRAFIKLAMBAS_)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        AK_LL_TRAFIKLAMBAS_
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:0080H         PUBLIC        P0
+  D:0090H         PUBLIC        P1
+  D:00A0H         PUBLIC        P2
+  B:0090H.0       PUBLIC        R1
+  B:0090H.3       PUBLIC        R2
+  B:00A0H.0       PUBLIC        R3
+  B:00A0H.3       PUBLIC        R4
+  C:0996H         PUBLIC        clear
+  B:0090H.1       PUBLIC        Y1
+  B:0090H.4       PUBLIC        Y2
+  B:00A0H.1       PUBLIC        Y3
+  B:00A0H.4       PUBLIC        Y4
+  D:00A8H         PUBLIC        IE
+  C:08F3H         PUBLIC        _seconddelay
+  C:096BH         PUBLIC        main
+  D:0089H         PUBLIC        TMOD
+  C:09C7H         PUBLIC        _phase1
+  C:09EEH         PUBLIC        incountA
+  C:09AFH         PUBLIC        _phase2
+  C:09FBH         PUBLIC        incountB
+  B:0088H.5       PUBLIC        TF0
+  D:008CH         PUBLIC        TH0
+  B:00A8H.0       PUBLIC        EX0
+  B:0088H.0       PUBLIC        IT0
+  D:008AH         PUBLIC        TL0
+  B:0088H.4       PUBLIC        TR0
+  C:092FH         PUBLIC        generateTime
+  D:0008H         PUBLIC        c
+  D:000AH         PUBLIC        i
+  D:000CH         PUBLIC        countA
+  D:000EH         PUBLIC        countB
+  D:0010H         PUBLIC        timeA
+  D:0012H         PUBLIC        timeB
+  B:0090H.2       PUBLIC        G1
+  B:0090H.5       PUBLIC        G2
+  B:00A0H.2       PUBLIC        G3
+  B:00A0H.5       PUBLIC        G4
+  -------         PROC          _SECONDDELAY
+BL51 BANKED LINKER/LOCATER V6.22                                                      05/21/2015  20:41:28  PAGE 3
+
+
+  D:0006H         SYMBOL        b
+  C:08F3H         LINE#         107
+  C:08F3H         LINE#         108
+  C:08F3H         LINE#         110
+  C:08F6H         LINE#         111
+  C:0904H         LINE#         112
+  C:0909H         LINE#         113
+  C:0909H         LINE#         114
+  C:090CH         LINE#         115
+  C:090FH         LINE#         116
+  C:0911H         LINE#         117
+  C:0913H         LINE#         118
+  C:0916H         LINE#         119
+  C:0924H         LINE#         120
+  C:092EH         LINE#         121
+  -------         ENDPROC       _SECONDDELAY
+  -------         PROC          CLEAR
+  C:0996H         LINE#         123
+  C:0996H         LINE#         124
+  C:0996H         LINE#         125
+  C:0998H         LINE#         126
+  C:099AH         LINE#         127
+  C:099CH         LINE#         128
+  C:099EH         LINE#         129
+  C:09A0H         LINE#         130
+  C:09A2H         LINE#         131
+  C:09A4H         LINE#         132
+  C:09A6H         LINE#         133
+  C:09A8H         LINE#         134
+  C:09AAH         LINE#         135
+  C:09ACH         LINE#         136
+  C:09AEH         LINE#         137
+  -------         ENDPROC       CLEAR
+  -------         PROC          _PHASE1
+  D:0006H         SYMBOL        t
+  C:09C7H         LINE#         139
+  C:09C7H         LINE#         140
+  C:09C7H         LINE#         141
+  C:09C9H         LINE#         142
+  C:09CBH         LINE#         143
+  C:09CDH         LINE#         144
+  C:09CFH         LINE#         145
+  C:09D2H         LINE#         146
+  C:09D4H         LINE#         147
+  C:09D6H         LINE#         148
+  -------         ENDPROC       _PHASE1
+  -------         PROC          _PHASE2
+  D:0006H         SYMBOL        t
+  C:09AFH         LINE#         151
+  C:09AFH         LINE#         152
+  C:09AFH         LINE#         153
+  C:09B1H         LINE#         154
+  C:09B3H         LINE#         155
+  C:09B5H         LINE#         156
+  C:09B7H         LINE#         157
+  C:09BAH         LINE#         158
+  C:09BCH         LINE#         159
+BL51 BANKED LINKER/LOCATER V6.22                                                      05/21/2015  20:41:28  PAGE 4
+
+
+  C:09BEH         LINE#         160
+  C:09C0H         LINE#         161
+  -------         ENDPROC       _PHASE2
+  -------         PROC          INCOUNTA
+  C:09EEH         LINE#         163
+  C:09F0H         LINE#         165
+  C:09F8H         LINE#         166
+  -------         ENDPROC       INCOUNTA
+  -------         PROC          INCOUNTB
+  C:09FBH         LINE#         167
+  C:09FDH         LINE#         169
+  C:0A05H         LINE#         170
+  -------         ENDPROC       INCOUNTB
+  -------         PROC          GENERATETIME
+  -------         DO            
+  D:0002H         SYMBOL        rate
+  -------         ENDDO         
+  C:092FH         LINE#         171
+  C:092FH         LINE#         172
+  C:092FH         LINE#         173
+  C:0944H         LINE#         174
+  C:094FH         LINE#         175
+  C:095EH         LINE#         176
+  C:0964H         LINE#         177
+  C:096AH         LINE#         178
+  -------         ENDPROC       GENERATETIME
+  -------         PROC          MAIN
+  C:096BH         LINE#         179
+  C:096BH         LINE#         180
+  C:096BH         LINE#         181
+  C:096EH         LINE#         182
+  C:0970H         LINE#         183
+  C:0973H         LINE#         184
+  C:0976H         LINE#         186
+  C:0978H         LINE#         187
+  C:097AH         LINE#         189
+  C:097AH         LINE#         190
+  C:097AH         LINE#         191
+  C:0981H         LINE#         192
+  C:0984H         LINE#         193
+  C:0987H         LINE#         194
+  C:098EH         LINE#         195
+  C:0991H         LINE#         196
+  C:0994H         LINE#         197
+  -------         ENDPROC       MAIN
+  -------         ENDMOD        AK_LL_TRAFIKLAMBAS_
+
+  -------         MODULE        ?C?IMUL
+  C:088CH         PUBLIC        ?C?IMUL
+  -------         ENDMOD        ?C?IMUL
+
+  -------         MODULE        ?C?UIDIV
+  C:089EH         PUBLIC        ?C?UIDIV
+  -------         ENDMOD        ?C?UIDIV
+
+******************************************************************************
+* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 011AH BYTE (13%) *
+BL51 BANKED LINKER/LOCATER V6.22                                                      05/21/2015  20:41:28  PAGE 5
+
+
+******************************************************************************
+
+Program Size: data=21.0 xdata=0 code=529
+LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)
